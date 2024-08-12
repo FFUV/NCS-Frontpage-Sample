@@ -1,92 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAMPLE SITEd - Copyright Free Music for Creators</title>
+    <title>NCS Music</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1546538069-a76384752379?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-text {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .featured-release {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .featured-release-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .featured-release-buttons {
+            display: flex;
+        }
+
+        .featured-release-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .popular-releases {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .popular-release {
+            width: 20%;
+            margin-bottom: 20px;
+        }
+
+        .popular-release-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <!-- Add Font Awesome for search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="/">
-                    <img src="logo.png" alt="NCS Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Search Tracks & Artists</a></li>
-                    <li><a href="#">Search Genres</a></li>
-                    <li><a href="#">Search Moods</a></li>
-                </ul>
-            </nav>
-            <div class="buttons">
-                <button class="regular">Regular</button>
-                <button class="instrumental">Instrumental</button>
-            </div>
+
+<header class="header">
+    <div class="logo">NCS</div>
+    <div class="search-bar">
+        <i class="search-icon fas fa-search"></i>
+        <input type="text" class="search-input" placeholder="Search Tracks & Artists">
+    </div>
+    <div class="dropdown">
+        <button class="button">Search Genres</button>
+        <div class="dropdown-content">
+            <a href="#">Electronic</a>
+            <a href="#">Hip Hop</a>
+            <a href="#">Pop</a>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-text">
-                    <h1>Copyright Free Music for Creators</h1>
-                    <p>We work with artists representing all genres of electronic music, generating over 500 billion plays globally. Whether you are MrBeast or just starting to create content, our music will always be free to use, allowing you to monetise without fear of copyright strikes.</p>
-                    <button class="usage-policy">Usage Policy</button>
-                </div>
-                <div class="hero-image">
-                    <img src="hero-image.jpg" alt="Hero Image">
-                    <div class="featured-release">
-                        <h2>Featured Release</h2>
-                        <h3>Follow Back</h3>
-                        <p>LXNGVX</p>
-                        <button class="play">Play</button>
-                        <button class="download">Download</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="popular-releases">
-            <div class="container">
-                <h2>Popular Releases</h2>
-                <div class="release-grid">
-                    <div class="release">
-                        <img src="release-1.jpg" alt="Release 1">
-                        <div class="release-info">
-                            <h3>Release Title 1</h3>
-                            <p>Artist Name 1</p>
-                        </div>
-                    </div>
-                    <div class="release">
-                        <img src="release-2.jpg" alt="Release 2">
-                        <div class="release-info">
-                            <h3>Release Title 2</h3>
-                            <p>Artist Name 2</p>
-                        </div>
-                    </div>
-                    <div class="release">
-                        <img src="release-3.jpg" alt="Release 3">
-                        <div class="release-info">
-                            <h3>Release Title 3</h3>
-                            <p>Artist Name 3</p>
-                        </div>
-                    </div>
-                    <div class="release">
-                        <img src="release-4.jpg" alt="Release 4">
-                        <div class="release-info">
-                            <h3>Release Title 4</h3>
-                            <p>Artist Name 4</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 NCS</p>
+    </div>
+    <div class="dropdown">
+        <button class="button">Search Moods</button>
+        <div class="dropdown-content">
+            <a href="#">Happy</a>
+            <a href="#">Sad</a>
+            <a href="#">Motivational</a>
         </div>
-    </footer>
+    </div>
+    <div>
+        <button class="button">Regular</button>
+        <button class="button">Instrumental</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Copyright free music for creators.</h1>
+        <p class="hero-text">We work with artists representing all genres of electronic music, generating over 500 billion plays globally. Whether you are MrBeast or just starting to create content, our music will always be free to use, allowing you to monetize without fear of copyright strikes.</p>
+        <button class="button">Usage Policy</button>
+    </div>
+</section>
+
+<section class="featured-release">
+    <img class="featured-release-image" src="https://images.unsplash.com/photo-1546538069-a76384752379?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="Featured Release">
+    <div>
+        <h2 class="featured-release-title">Follow Back</h2>
+        <p>LXNGVX</p>
+        <div class="featured-release-buttons">
+            <button class="featured-release-button">Play</button>
+            <button class="featured-release-button">Download</button>
+        </div>
+    </div>
+</section>
+
+<section class="popular-releases">
+    <div class="popular-release">
+        <img class="popular-release-image" src="https://images.unsplash.com/photo-1546538069-a76384752379?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="Popular Release 1">
+    </div>
+    <div class="popular-release">
+        <img class="popular-release-image" src="https://images.unsplash.com/photo-1546538069-a76384752379?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="Popular Release 2">
+    </div>
+    <div class="popular-release">
+        <img class="popular-release-image" src="https://images.unsplash.com/photo-1546538069-a76384752379?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="Popular Release 3">
+    </div>
+    <div class="popular-release">
+        <img class="popular-release-image" src="https://images.unsplash.com/photo-1546538069-a76384752379?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="Popular Release 4">
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2023 NCS</p>
+</footer>
+
 </body>
 </html>
