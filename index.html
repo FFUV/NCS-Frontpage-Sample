@@ -3,35 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Website</title>
+    <title>SAMPLE SITEd - Copyright Free Music for Creators</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <img src="https://via.placeholder.com/150x50" alt="NCS Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><img src="https://via.placeholder.com/24" alt="Home"> Home</a></li>
-                <li><a href="tracks.html"><img src="https://via.placeholder.com/24" alt="Tracks"> Tracks</a></li>
-                <li><a href="genres.html"><img src="https://via.placeholder.com/24" alt="Genres"> Genres</a></li>
-                <li><a href="contact.html"><img src="https://via.placeholder.com/24" alt="Contact"> Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="main-content">
-        <header>
-            <h1>Featured Music</h1>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for tracks or genres">
-                <button>Search</button>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="logo.png" alt="NCS Logo">
+                </a>
             </div>
-        </header>
-        <section class="content">
-            <h2>Welcome to Our Music Site</h2>
-            <p>Discover the latest tracks and genres.</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Search Tracks & Artists</a></li>
+                    <li><a href="#">Search Genres</a></li>
+                    <li><a href="#">Search Moods</a></li>
+                </ul>
+            </nav>
+            <div class="buttons">
+                <button class="regular">Regular</button>
+                <button class="instrumental">Instrumental</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Copyright Free Music for Creators</h1>
+                    <p>We work with artists representing all genres of electronic music, generating over 500 billion plays globally. Whether you are MrBeast or just starting to create content, our music will always be free to use, allowing you to monetise without fear of copyright strikes.</p>
+                    <button class="usage-policy">Usage Policy</button>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-image.jpg" alt="Hero Image">
+                    <div class="featured-release">
+                        <h2>Featured Release</h2>
+                        <h3>Follow Back</h3>
+                        <p>LXNGVX</p>
+                        <button class="play">Play</button>
+                        <button class="download">Download</button>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
+        <section class="popular-releases">
+            <div class="container">
+                <h2>Popular Releases</h2>
+                <div class="release-grid">
+                    <div class="release">
+                        <img src="release-1.jpg" alt="Release 1">
+                        <div class="release-info">
+                            <h3>Release Title 1</h3>
+                            <p>Artist Name 1</p>
+                        </div>
+                    </div>
+                    <div class="release">
+                        <img src="release-2.jpg" alt="Release 2">
+                        <div class="release-info">
+                            <h3>Release Title 2</h3>
+                            <p>Artist Name 2</p>
+                        </div>
+                    </div>
+                    <div class="release">
+                        <img src="release-3.jpg" alt="Release 3">
+                        <div class="release-info">
+                            <h3>Release Title 3</h3>
+                            <p>Artist Name 3</p>
+                        </div>
+                    </div>
+                    <div class="release">
+                        <img src="release-4.jpg" alt="Release 4">
+                        <div class="release-info">
+                            <h3>Release Title 4</h3>
+                            <p>Artist Name 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 NCS</p>
+        </div>
+    </footer>
 </body>
 </html>
